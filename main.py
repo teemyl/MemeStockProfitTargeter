@@ -100,7 +100,7 @@ class ProfitTargeter:
 
     for opt, arg in self.opts:
       if opt in ['-h', '--help']:
-        print('main.py <-h --help> <-p --print> <-a --add name value')
+        print('main.py <-h --help> <-p --print> <-a --add> name value')
         sys.exit(2)
 
       elif opt in ['-p', '--print']:
