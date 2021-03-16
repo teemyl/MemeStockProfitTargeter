@@ -140,11 +140,13 @@ class ProfitTargetCalculator:
         base_value = float(self.args[-1])
 
         today = datetime.date.today()
-        usd_eur = self.get_usd_eur_by_date(today)[0]
+        usd_eur = self.get_usd_eur_by_date(today)
         
         if not usd_eur:
           self.update_rates()
-          usd_eur = self.get_usd_eur_by_date(today)[0]
+          usd_eur = self.get_usd_eur_by_date(today)
+
+        usd_eur = usd_eur[0]
         
         target_value = self.calculate_target(base_value, usd_eur)
 
